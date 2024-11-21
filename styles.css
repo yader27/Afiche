@@ -1,0 +1,340 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'BurnSide';
+  src: url('fonts/BurnSide.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bloodsoul';
+  src: url('fonts/Bloodsoul.ttf') format('truetype');
+}
+
+
+
+
+body,
+html {
+  height: 100%;
+  font-family: 'BurnSide', sans-serif;
+  color: #C8760F
+}
+
+/* Full-screen background image */
+body {
+  background: url('assets/backGround.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #4F190D;
+}
+
+
+.main-title-image{
+
+  display: none;
+}
+
+.presenta-text {
+  font-family: 'Bloodsoul', sans-serif;
+  font-size: 50px;
+margin-bottom: 60px;
+  color: white;
+  text-align: center;
+}
+
+/* Main container */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 90%;
+  width: 100%;
+}
+
+/* Left column */
+.column-left {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-column: 1 / 2;
+  gap: 5px;
+  padding: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* General styles for the container */
+.row img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Right column */
+.column-right {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  overflow: hidden;
+}
+
+.column-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Triángulo con logos */
+
+.triangle-layout {
+  margin-top: -13%;
+  margin-bottom: 10%;
+}
+
+.triangle-text-container {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.invitados-text {
+  font-size: 20px;
+
+
+  text-align: center;
+}
+
+.triangle-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+.main-logo {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  width: 120px;
+
+  height: 80px;
+  object-fit: contain;
+}
+
+.third-logo {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  width: 120px;
+
+  height: 60px;
+  object-fit: contain;
+}
+
+.secondary-logo {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  width: 120px;
+
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Tercera fila (column-left) - Estilo general */
+.third-row {
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+}
+
+.third-row .column-left-third,
+.third-row .column-right-third {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.third-row img {
+  margin-top: 10px;
+  margin-left: 5px;
+  max-width: 100%;
+}
+
+/* Tercera fila (desktop) - Layout adaptativo */
+@media (min-width: 768px) {
+  .third-row {
+    flex-direction: row;
+  }
+
+  .third-row .column-left-third,
+  .third-row .column-right-third {
+    width: 20%;
+  }
+
+  .third-row .column-left-third img,
+  .third-row .column-right-third img {
+    margin-left: 0;
+    width: 80%;
+  }
+}
+
+/* Ocultar la tercera fila en móviles */
+@media (max-width: 767px) {
+  .third-row {
+    display: none;
+  }
+}
+
+/* General styles for footer */
+.footer {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+}
+
+.footer div {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer-link img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.sub-title-image {
+  max-width: 50% !important;
+  margin-top: -116px;
+}
+
+/* General styles for images */
+.image-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.image-link img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer; /* Indica que la imagen es clickeable */
+}
+
+/* Efecto hover - agrandar la imagen */
+.image-link:hover img {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen */
+  opacity: 0.9; /* Añade un pequeño efecto de opacidad */
+}
+
+/* Asegúrate de que las imágenes dentro de los contenedores de logos se comporten igual */
+.triangle-images img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.triangle-images img:hover {
+  transform: scale(1.1); /* Aumenta el tamaño de las imágenes en el triángulo */
+  opacity: 0.9; /* Pequeña opacidad */
+}
+
+
+/* Ajuste para pantallas más grandes */
+@media (min-width: 768px) {
+  .sub-title-image {
+    max-width: 50%;
+    margin-top: -116px;
+  }
+}
+
+/* Margen de la columna izquierda en desktop */
+@media (min-width: 768px) {
+  .column-left {
+    margin-left: 25%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .column-left {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .column-right {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    order: 1;
+    /* Asegura que la columna derecha esté debajo */
+    margin-top: 20px;
+  }
+
+  .column-right img {
+    max-width: 80%;
+    height: auto;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 5%;
+    left: 11%;
+    z-index: -1;
+  }
+
+  /* Ajuste de logos para móvil */
+  .main-logo,
+  .third-logo,
+  .secondary-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+
+  .triangle-layout {
+    margin-top: -100%;
+    margin-bottom: 10%;
+  }
+
+  .sub-title-image {
+
+    margin-top: -330px;
+  }
+
+
+  .invitados-text{
+
+  display: none;
+  }
+
+  .title-section{
+    margin-top: -15%;
+  }
+
+
+}

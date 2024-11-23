@@ -24,7 +24,8 @@ body,
 html {
   height: 100%;
   font-family: 'BurnSide', sans-serif;
-  color: #C8760F
+  color: #C8760F;
+  overflow: hidden;
 }
 
 /* Full-screen background image */
@@ -37,7 +38,32 @@ body {
 }
 
 
-.main-title-image{
+/* .spotify-player {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  bottom: -53%;
+} */
+
+/* Contenedor para la animación Lottie */
+.lottie-animation {
+  position: absolute;
+  top: 50%;
+  /* Centrar verticalmente */
+  left: 50%;
+  /* Centrar horizontalmente */
+  transform: translate(-50%, -50%);
+  /* Centrar exactamente en el contenedor */
+  width: 100%;
+  /* Ajustar al tamaño disponible */
+  height: auto;
+  /* Mantén la proporción de la animación */
+  pointer-events: none;
+  /* Evita interferencias con el usuario */
+}
+
+
+.main-title-image {
 
   display: none;
 }
@@ -45,7 +71,7 @@ body {
 .presenta-text {
   font-family: 'Bloodsoul', sans-serif;
   font-size: 50px;
-margin-bottom: 60px;
+  margin-bottom: 60px;
   color: white;
   text-align: center;
 }
@@ -242,13 +268,16 @@ margin-bottom: 60px;
 
 .image-link img {
   transition: transform 0.3s ease, opacity 0.3s ease;
-  cursor: pointer; /* Indica que la imagen es clickeable */
+  cursor: pointer;
+  /* Indica que la imagen es clickeable */
 }
 
 /* Efecto hover - agrandar la imagen */
 .image-link:hover img {
-  transform: scale(1.1); /* Aumenta el tamaño de la imagen */
-  opacity: 0.9; /* Añade un pequeño efecto de opacidad */
+  transform: scale(1.1);
+  /* Aumenta el tamaño de la imagen */
+  opacity: 0.9;
+  /* Añade un pequeño efecto de opacidad */
 }
 
 /* Asegúrate de que las imágenes dentro de los contenedores de logos se comporten igual */
@@ -257,8 +286,10 @@ margin-bottom: 60px;
 }
 
 .triangle-images img:hover {
-  transform: scale(1.1); /* Aumenta el tamaño de las imágenes en el triángulo */
-  opacity: 0.9; /* Pequeña opacidad */
+  transform: scale(1.1);
+  /* Aumenta el tamaño de las imágenes en el triángulo */
+  opacity: 0.9;
+  /* Pequeña opacidad */
 }
 
 
@@ -327,12 +358,12 @@ margin-bottom: 60px;
   }
 
 
-  .invitados-text{
+  .invitados-text {
 
-  display: none;
+    display: none;
   }
 
-  .title-section{
+  .title-section {
     margin-top: -15%;
   }
 

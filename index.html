@@ -7,22 +7,29 @@
     <title>Responsive Layout</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
 </head>
 
 <body>
+
+
     <div class="container">
         <div class="column-left">
+            <!-- Contenedor para la animación de nieve -->
+            <div id="snow-animation" class="lottie-animation"></div>
             <!-- Título principal y subtítulo -->
             <div class="row title-section">
-                <a href="#" class="image-link">
-                    <img src="assets/Title.svg" alt="Title Image" class="main-title-image animate__animated ">
-                </a>
+
+                <img src="assets/Title.svg" alt="Title Image" class="main-title-image animate__animated ">
+
                 <p class="presenta-text animate__animated animate__fadeIn animate__delay-2s">PRESENTA</p>
             </div>
             <div class="row subtitle-section">
-                <a href="https://www.instagram.com" target="_blank" class="image-link sub-title-image">
+                <a href="https://biolink.website/Room33?fbclid=PAZXh0bgNhZW0CMTEAAabcWEv_inv3DZ7myIkTEWbP7OET3msgtQd-QF1E1VUImzSWWAcJu1KxBjE_aem_AUcWeFD44Yyp14bTasvZlg"
+                    target="_blank" class="image-link sub-title-image">
                     <img class=" animate__animated animate__flash" src="assets/room33Logo.png" alt="Room 33 Logo">
                 </a>
+
             </div>
 
             <!-- Triángulo con logos -->
@@ -58,22 +65,37 @@
 
         <!-- Columna derecha -->
         <div class="column-right animate__animated animate__fadeIn animate__delay-4s">
-            <img src="assets/IlustrationKrampus.png" alt="Illustration of Krampus">
+            <a href="https://1drv.ms/i/c/de8011bd9a5c5465/IQR_YvQKEnZwS57cq_401AcQAV4Sn6-4MLCJBhjt9Gw5p-w?width=1024"
+                target="_blank">
+                <img src="assets/IlustrationKrampus.png" alt="Illustration of Krampus">
+            </a>
+
+            <!-- Reproductor de Spotify debajo de la imagen -->
+            <!-- <div class="spotify-player">
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/track/0MuQhrnarTuzTXsfGc6frH?utm_source=generator&theme=0"
+                    width="100%" height="152" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy">
+                </iframe>
+            </div> -->
         </div>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div>
-            <a href="https://facebook.com" target="_blank" class="footer-link">
+            <a href="https://www.facebook.com/killtrayerthrashband" target="_blank" class="footer-link">
                 <img src="assets/fbIcon.svg" alt="Facebook Icon"> Facebook
             </a>
-            <a href="https://instagram.com" target="_blank" class="footer-link">
+            <a href="https://www.instagram.com/killtrayer/" target="_blank" class="footer-link">
                 <img src="assets/instagram.svg" alt="Instagram Icon"> Instagram
             </a>
-            <a href="https://maps.google.com" target="_blank" class="footer-link">
+            <a href="https://www.google.com/maps?q=9.92570972442627,-84.2064743041992" target="_blank"
+                class="footer-link">
                 <img src="assets/ubiIcon.svg" alt="Location Icon"> Ubicación
             </a>
+
         </div>
     </footer>
     <script src="script.js"></script>

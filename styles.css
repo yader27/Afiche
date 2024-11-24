@@ -255,6 +255,40 @@ body {
   object-fit: contain;
 }
 
+.music-control {
+  position: fixed;
+  bottom: 20px;
+  /* Asegura que quede encima del footer */
+  right: 20px;
+  z-index: 1000;
+  text-align: center;
+}
+
+.button-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.button-container img {
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+#play-text {
+  position: absolute;
+  top: -20px;
+  /* Posiciona el texto arriba de la imagen */
+  left: 50%;
+  max-width: 30%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  /* Agrega un sombreado para mayor visibilidad */
+}
+
 .sub-title-image {
   max-width: 50% !important;
   margin-top: -116px;

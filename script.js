@@ -1,27 +1,45 @@
 window.onload = function () {
-    // Mostrar el logo y la imagen de fondo, luego de 2 segundos, mostrar "Presenta"
+    const playButton = document.getElementById('play-button');
+    const playText = document.getElementById('play-text'); // Texto dinámico
+    const audio = document.getElementById('background-music');
+    let isPlaying = false;
+
+    // Cambiar ícono y texto, y controlar reproducción
+    playButton.addEventListener('click', () => {
+        if (isPlaying) {
+            audio.pause();
+            playButton.src = 'assets/play-icon.svg'; // Ícono de Play
+            playText.textContent = 'Play'; // Cambia texto a "Play"
+        } else {
+            audio.play().catch((error) => {
+                console.error("Error reproduciendo el audio:", error);
+                alert("Debes interactuar con la página para iniciar la música.");
+            });
+            playButton.src = 'assets/stop-icon.svg'; // Ícono de Stop
+            playText.textContent = 'Stop'; // Cambia texto a "Stop"
+        }
+        isPlaying = !isPlaying;
+    });
+
+    // Animaciones y contenido adicional
     setTimeout(function () {
-        document.querySelector('.main-title-image').style.display = 'none'
+        document.querySelector('.main-title-image').style.display = 'none';
         document.querySelector('.presenta-text').style.display = 'block';
     }, 400);
 
-    // Después de 4 segundos, mostrar el resto de contenido
     setTimeout(function () {
         document.querySelector('.main-title-image').style.display = 'block';
         document.querySelector('.presenta-text').style.display = 'none';
-        // Agrega cualquier otra animación si lo deseas
         document.querySelector('.main-title-image').classList.add('animate__fadeIn');
     }, 4000);
 
-    // Selecciona el contenedor
+    // Animación de nieve
     const snowAnimation = document.getElementById('snow-animation');
-
-    // Carga la animación usando Lottie
     lottie.loadAnimation({
-        container: snowAnimation, // Contenedor donde se reproducirá
-        renderer: 'svg', // Usa el renderizador SVG para mejor calidad
-        loop: true, // La animación se repite indefinidamente
-        autoplay: true, // La animación inicia automáticamente
-        path: 'https://lottie.host/7239407f-fdcd-4120-8796-d9691ac376f2/ukL0NAraEo.json' // Ruta al archivo JSON de la animación
+        container: snowAnimation,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'https://lottie.host/7239407f-fdcd-4120-8796-d9691ac376f2/ukL0NAraEo.json'
     });
-}
+};

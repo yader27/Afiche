@@ -37,7 +37,7 @@
                 <div class="triangle-layout animate__animated animate__fadeIn animate__delay-4s">
                     <!-- Logos posicionados en forma triangular -->
                     <div class="triangle-images">
-                        <a href="https://www.dj.com" target="_blank" class="image-link third-logo">
+                        <a href="https://www.instagram.com/sealgroove?igsh=bTBobXh6bW9xdmk0" target="_blank" class="image-link third-logo">
                             <img class="" src="assets/DjLogo.png" alt="DJ Logo">
                         </a>
                         <div class="main-logo triangle-text-container">
@@ -54,7 +54,10 @@
             <div class="row third-row animate__animated animate__fadeIn animate__delay-4s">
                 <div class="column-left-third">
                     <p>Patrocinadores:</p>
-                    <img src="assets/cjsLogo.png" alt="Sponsor Logo">
+                    <a href="https://www.instagram.com/casajimmystudios/" target="_blank">
+                        <img src="assets/cjsLogo.png" alt="Sponsor Logo">
+                    </a>
+                    
                 </div>
                 <div class="column-right-third">
                     <p>Pre-venta:</p>
@@ -70,6 +73,8 @@
                 <img src="assets/IlustrationKrampus.png" alt="Illustration of Krampus">
             </a>
 
+            
+
             <!-- Reproductor de Spotify debajo de la imagen -->
             <!-- <div class="spotify-player">
                 <iframe style="border-radius:12px"
@@ -80,6 +85,17 @@
                 </iframe>
             </div> -->
         </div>
+    </div>
+
+    <div class="music-control animate__animated animate__rubberBand">
+        <div class="button-container">
+            <span id="play-text">Play</span> <!-- Texto sobre el botón -->
+            <img id="play-button" src="assets/play-icon.svg" alt="Play Button">
+        </div>
+        <audio id="background-music" autoplay loop>
+            <source src="assets/KrampustFestInstrumental.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
     </div>
 
     <!-- Footer -->
@@ -97,6 +113,7 @@
             </a>
 
         </div>
+       
     </footer>
     <script src="script.js"></script>
 </body>
